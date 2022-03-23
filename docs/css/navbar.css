@@ -1,0 +1,25 @@
+#nav-main {
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}
+
+#nav-main .nav-item:not(:last-child) {
+    margin-right: 35px;
+}
+
+.dropdown-toggle::after {
+    transition: transform 0.15s linear;
+}
+
+.show.dropdown .dropdown-toggle::after {
+    transform: translateY(3px);
+}
+
+.dropdown-menu {
+    margin-top: 0;
+}
+#PageName {
+    font-family: "Orbitron";
+ }
+.navbar-brand{
+    vertical-align: middle;
+}

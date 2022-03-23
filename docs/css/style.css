@@ -1,0 +1,470 @@
+/*Color del fondo de todo body y html*/
+body, html {
+    background: #60a3bc !important;
+}
+
+/*Zoom en imagenes*/
+.thumb {
+    margin-bottom: 15px;
+}
+
+/* .thumb:last-child {
+    margin-bottom: 0;
+} */
+
+/*Color de fondo de todos los containers (azul oscuro/marino)*/
+.container {
+    background: #468297;
+    padding-top: .1%;
+}
+
+/* CSS Image Hover Effects: https://www.nxworld.net/tips/css-image-hover-effects.html */
+
+.thumb img {
+    -webkit-transition: .5s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.thumb img:hover {
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08)
+}
+
+#container-recent {
+    background: #468297;
+    padding-top: .1%;
+    /* max-width: unset;*/
+}
+
+/*Separador*/
+
+.photo-block {
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5%;
+}
+
+.photo-title {
+    font-size: 140%;
+    font-family: Arial;
+    text-decoration: underline;
+}
+
+.photo-score {
+    font-family: 130%;
+    font-family: monospace;
+}
+
+.photo-image {
+    height: auto;
+    width: 100%;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.input-group>label {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}
+
+.input-group {
+    margin-bottom: 0.5em;
+}
+
+div.title-block {
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #EEEEEE;
+}
+
+#title {
+    font-size: 300%;
+    text-decoration: none;
+    color: #444444;
+    font-family: sans-serif;
+    margin-bottom: 0;
+}
+
+#subtitle {
+    font-size: 120%;
+    font-style: italic;
+    color: #555555;
+    font-family: monospace;
+}
+
+div.navigation>a {
+    color: white;
+    font-size: 120%;
+    background-color: #555555;
+    font-family: monospace;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 150px;
+}
+
+/*LOGIN Screen*/
+
+/*Logo signin*/
+
+#logo-login {
+    background-color: #ccc;
+    position: absolute;
+    height: 156px;
+    width: 160px;
+    top: -75px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 1px 1px 15px -5px black;
+    transition: all .3s ease;
+    border-radius: 50%;
+    background: #468297;
+    padding: 10px;
+    text-align: center;
+}
+
+#logo-login:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#logo-login:hover .profile-pic {
+    opacity: .5;
+}
+
+.profile-pic {
+    height: 133px;
+    width: 135px;
+    transition: all .3s ease;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+
+/*Login color de fondo*/
+.user_card {
+    height: 400px;
+    width: 350px;
+    margin-top: 70px;
+    margin-bottom: auto;
+    /*background: #f39c12;*/
+    background: linear-gradient( to right, #50db7a, #50db7a);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+.form_container {
+    margin-top: 100px;
+}
+
+/*Para que el boton de login de la pantalla de sign in salga de color*/
+
+#signIn-login-button {
+    width: 100%;
+    background: #c0392b;
+    color: white;
+}
+
+/*Para que el boton de login (signIn-login-button) sea mas chico y no abarque como el campo login y pass*/
+
+.login_container {
+    padding: 0 2rem;
+}
+
+/*Para que el recuadro del logo de usuario y de password(key) salgan con fondo rojo y un poco redondeado*/
+
+#login-pass-logo, #login-user-logo {
+    background: #c0392b;
+    color: white;
+    border: 0;
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+/* para caja remember
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #c0392b !important;
+}
+*/
+
+/*Trendings*/
+
+#trending-title {
+    font: "Oswald", sans-serif;
+}
+
+#container-trending {
+    background: #468297;
+    padding-top: 1%;
+}
+
+/*Función comentada para poner de color negor el fodo de User-info
+#background-black{
+    background-image: url(https://images.unsplash.com/photo-1530305408560-82d13781b33a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
+}*/
+
+/*Si no se pone se queda descuadrado un pelín la barra de navegación*/
+
+#nav-margins {
+    display: block;
+}
+
+/*Photo tittle for all pages*/
+
+.tittle-photos {
+    font-family: "Orbitron";
+    font-style: oblique;
+    text-decoration: underline;
+}
+
+#container-PhotoDetails {
+    background: #468297;
+    padding-top: 0.5%;
+}
+
+#comment-box {
+    border: 8px double #444444;
+    display: block;
+}
+
+#photo-div {
+    border: 8px double #444444;
+}
+
+
+#user-comment {
+    display: inline-flex;
+    width: 100%;
+}
+
+#avatar-user-comment {
+    padding-right: 5px;
+}
+
+#comment-text {
+    text-align: left;
+    width: 100%;
+}
+
+#comment-text-wrapper {
+    width: 83%;
+}
+
+.comment-wrapper {
+    height: fit-content;
+    vertical-align: middle;
+    height: 96%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 96%;
+}
+
+#comments-list {
+    position: relative;
+    overflow-y: auto;
+    height: fit-content;
+    justify-content: space-between;
+    height: 75vh;
+    width: 100%;
+    max-height: 500px;
+    display: block;
+}
+
+#escribir-comentario {
+    vertical-align: middle;
+    resize: none;
+    float: left;
+    width: 75%;
+    margin-left: 10px;
+    overflow-y: hidden;
+}
+
+#enviar-comentario {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#post-comment {
+    display: block;
+    width: 100%;
+}
+/*Color de la descripcion*/
+#desc {
+    background-color: rgb(219, 211, 211);
+}
+
+#desc-pic {
+    background-color: #4191ad/*rgb(105, 102, 102)*/
+    ;
+}
+
+/*Form para valorar fotos (estrellas)*/
+
+/*Basado en https://bbbootstrap.com/snippets/animated-rating-stars-18298447
+y https://codepen.io/yaworek/pen/JJpEaZ*/
+
+/*Para que aparezcan en negro*/
+.starrating>input {
+    display: none;
+}
+
+/* Quita los radio buttons y los pone como strellas ("\f005"*/
+.starrating>label:before {
+    content: "\f005";
+    /* Star */
+    margin: 2px;
+    font-family: FontAwesome;
+    display: inline-block;
+}
+
+.starrating>label {
+    color: #222222;
+    /* Color de la estrella cuando no está clicada */
+}
+
+/*Colores de las estrellas al hacerle hover o al clicarle*/
+#star1:checked~label, #star1:hover~label {
+    color: rgb(177, 49, 10)
+}
+
+#star2:checked~label, #star2:hover~label {
+    color: rgb(252, 151, 0)
+}
+
+#star3:checked~label, #star3:hover~label {
+    color: yellow
+}
+
+#star4:checked~label, #star4:hover~label {
+    color: rgb(166, 255, 0)
+}
+
+#star5:checked~label, #star5:hover~label {
+    color: rgb(56, 231, 49);
+}
+
+/*Register*/
+
+.card_photo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+#logo-register {
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    box-shadow: 1px 1px 15px -5px black;
+    transition: all .3s ease;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+}
+
+#logo-register:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#logo-register:hover .profile-pic {
+    opacity: .5;
+}
+
+/*Upload Photo*/
+
+#agregar-descripcion {
+    width: 100%;
+    resize: none;
+}
+
+#container-uploadPhoto {
+    background: #468297;
+    padding-top: 1%;
+}
+
+/*Buscar*/
+
+#container-search {
+    background: #468297;
+    padding-top: .1%;
+}
+
+/*Editar perfil*/
+
+.editProfile-Pic {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+/*Basado en el de register*/
+
+#logo-editProfile {
+    transition: all .3s ease;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+}
+
+#imgFileUpload:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#logo-editProfile:hover .profile-pic {
+    opacity: .5;
+}
+
+.editProfile-containers {
+    display: inline-flex;
+    align-items: center;
+}
+
+#editProfile-about {
+    resize: none;
+    overflow-y: auto;
+}
+
+#editProfileAbout {
+    vertical-align: middle;
+    resize: none;
+    width: 100%;
+    overflow-y: auto;
+    border-color: #ccc;
+}
+
+#editProfileAbout::placeholder {
+    padding-left: 10px;
+}
+
+.height100 {
+    height: 100%;
+}
+
+.cardFlexStyle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.floatLeft {
+    float:left
+}

@@ -1,0 +1,87 @@
+<!Doctype html>
+<html>
+
+<head>
+    <!-- <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+    <script script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script> -->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+    <script script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <title> Buscar </title>
+
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- necesario para poder hacer el autocompletado -->
+    
+    <!-- <script src="/js/libs/jquery-3.4.1.min.js "> </script> -->
+    <script src="/js/libs/popper.min.js "> </script>
+    <script src="/js/libs/bootstrap.min.js "> </script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!--Stylesheet usada para los logos de photos followers y follwing-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+    <script src="/js/header.js" type="module"></script>
+    <script src="/js/libs/axios.min.js"> </script>
+    <script src="./js/utils/search.js" type="module"> </script>
+    <script src="js/utils/include.js"></script>
+    <script src="./js/search.js" type="module"> </script>
+</head>
+
+<body>
+    <div id="page-header" class="mr-3 ml-3"></div>
+    <div class="container pb-3 mb-3" id="container-search">
+        <h1 class="my-4 text-center tittle-photos mx-4">Buscar</h1>
+        <div id="errors"></div>
+        <div class="row" id="nav-margins">
+            <div class="col-md-12" id="search-bar">
+                <div class="input-group" id="adv-search">
+                    <input type="text" class="form-control" placeholder="Buscar..." id="search-input" />
+                    <div class="input-group-btn">
+                        <div class="btn-group" role="group">
+                            <div class="dropdown dropdown-lg">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                    id="dropdown-search-type">All</button>
+                                <div class="dropdown-menu dropdown-menu-right" role="menu" id="dropdown-hide-show">
+                                    <!--Padding para que el dropdown se vea bien-->
+                                    <div class="pr-4 pl-4">
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group">
+                                                <label for="filter">Filter by</label>
+                                                <select class="form-control" id="search-type-selected">
+                                                    <option value="0" selected>All (Default)</option>
+                                                    <option value="1">Usuario</option>
+                                                    <option value="2">Fotos</option>
+                                                    <option value="3">Categoria</option>
+                                                </select>
+                                            </div>
+                                            <button type="button" class="btn btn-primary text-center"
+                                                id="search-type-buttom">Aplicar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary" id="search-submit"><i
+                                    class="fas fa-search">Buscar</i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <hr>
+        <div class="row gallery">
+        </div>
+    </div>
+    </div>
+    <script>include('header.html', '#page-header')</script>
+
+</body>
+
+</html>

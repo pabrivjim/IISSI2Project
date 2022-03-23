@@ -1,0 +1,50 @@
+<head>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Open+Sans&family=Orbitron&family=Raleway&family=Rock+Salt&display=swap" rel="stylesheet">
+</head>
+
+
+<br>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav-main">
+    <a href="#" class="navbar-brand">
+        <!-- Logo Image -->
+        <img src="./images/PhotoPic.jpeg" id="header-avatar-placeholder" height= "45" width="45" alt="" class="d-inline-block align-middle mr-2" style="border-radius: 50%;
+        border: 2px solid white;">
+        <!-- Logo Text -->
+        <span class="text-uppercase font-weight-bold" id="PageName">PhotoPic</span>
+    </a>
+    
+    <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+
+    <div id="navbarSupportedContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a href="index.html" class="nav-link">Recientes <span
+                        class="sr-only">(current)</span></a></li>
+            <li class="nav-item dropdown" id="header-trending">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Tendencias
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                    <a class="dropdown-item" href="trendings.html#mostFollowUsers">Usuarios más seguidos</a>
+                    <a class="dropdown-item" href="trendings.html#mostValuedUsers">Usuarios mejor puntuados</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="trendings.html#mostCommentsPic">Fotos más comentadas</a>
+                    <a class="dropdown-item" href="trendings.html#mostValuedPic">Fotos mejor puntuadas</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="trendings.html#trendingCategory">Categorías más usadas</a>
+                </div>
+            </li>
+            <li class="nav-item" id="header-followedUsers"><a href="followedUsers.html" class="nav-link" >Seguidos</a></li>
+            <li class="nav-item" id="header-search"><a href="search.html" class="nav-link" >Buscar</a></li>
+            <li class="nav-item" id="header-uploadPhoto"><a href="uploadPhoto.html" class="nav-link" >Subir Foto</a></li>
+            <li class="nav-item" id="header-myProfile"><a href="userInfo.html" class="nav-link" id="header-myUserInfo" >Mi Perfil</a></li>
+            <li class="nav-item" id="header-li-login"><a id ="header-login" href="login.html" class="btn btn-outline-success" >Acceder</a></li>
+            <li class="nav-item" id="header-li-logout"><a class= "btn btn-danger" href="#" id="header-logout">Cerrar Sesión</a></li>
+        </ul>
+    </div>
+</nav>
+
+<hr>

@@ -1,0 +1,137 @@
+<!Doctype html>
+<html>
+
+<head>
+    <!-- <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+    <script script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script> -->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+    <script script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <title> Subir Foto </title>
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/forms.css">
+    <script src="js/utils/include.js"></script>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <!-- <script src="/js/libs/jquery-3.4.1.min.js "> </script> -->
+    <script src="/js/libs/popper.min.js "> </script>
+    <script src="/js/libs/bootstrap.min.js "> </script>
+    <!--<script src="/js/photo_details.js" type="module"> </script>-->
+    <!--Stylesheet usada para los logos de basura-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+    <script src="/js/editPhoto.js" type="module"></script>
+    <script src="/js/libs/axios.min.js"></script>
+    <script src="/js/header.js" type="module"></script>
+    <script src="./js/utils/categories.js" type="module"> </script>
+
+</head>
+
+<body>
+    <div class="modal fade" id="categoriesModalCenter" tabindex="-1" role="dialog" aria-labelledby="categoriesModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Opciones de Categorías</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <div id="successDiv"></div>
+                <div class=" col-md-12 form__group field">
+                    <input type="input" class="form__field" placeholder="Categoría a crear" name="category" id='category'/>
+                    <label for="category" class="form__label">Crear Categoría</label>
+                    <button type="button" class="btn btn-success mr-3 mt-3 mb-3" id="createCategory">
+                        Crear Categoría
+                    </button>
+                </div>
+                <div class=" col-md-12 form__group field">
+                    <input type="text" class="form__field" placeholder="Añadir Categoría" id='linkcategory'/>
+                    <label for="linkcategory" class="form__label">Añadir Categoría</label>
+                    <!-- <input type="text" class="form-control" placeholder="Buscar..." id="linkcategory"/> -->
+                    <button type="button" class="btn btn-success mr-3 mt-3 mb-3" id="submitLinkCategory">
+                        Añadir Categoria
+                    </button>
+                </div>
+                <div class=" col-md-12 form__group field">
+                    <h5>Lista de Categorías Asociadas:</h5>
+                    <div id="categoryList">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar Cambios</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div id="page-header" class="mr-3 ml-3"></div>
+    <div class="container mb-5" id="container-trending">
+        <h1 class="my-4 text-center tittle-photos mx-4" id="Upload/Edit-Tittle">Subir Foto</h1>
+        <div id="errors"></div>
+        <div class="row justify-content-around">
+            <div class="col-md-10 mb-5">
+                <div class="card mt-3 mb-3">
+                    <div class="card-body" style="height: fit-content;">
+                        <form id="form-photo-upload">
+                            <div class="col-md-12 form__group2 mt-3">
+                                <input required type="input" class="form__field" id="url" name="url" placeholder="Foto URL"
+                                    required>
+                                <label for="url" class="form__label">Url</label>
+                            </div>
+                            <div class=" col-md-12 form__group field mt-3">
+                                <input type="input" class="form__field" placeholder="Título" name="title" id='title'
+                                    required />
+                                <label for="title" class="form__label">Título</label>
+                            </div>
+                            <!-- <div class="col-md-12 form__group field mt-3">
+                                <input type="input" class="form__field" placeholder="Categoría" name="categoria"
+                                    id='categoria' required />
+                                <label for="categoria" class="form__label">Categoría</label>
+                                </div> -->
+
+                            <div class="col-md-12 mt-3">
+                                <label for="input-visibility">Visibilidad:</label>
+                                <select required class="form-control" id="input-visibility" name="visibility">
+                                    <option value="Public">Public</option>
+                                    <option value="Private">Private</option>
+                                </select>
+                            </div>
+                            <div class=" col-md-12 form__group field" style="display: block;">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#categoriesModalCenter">
+                                    Opciones de Categoría
+                                  </button>
+                            </div>
+                            <!-- <div class="col-md-12 form__group field mt-3">
+                                <input type="date" class="calendar__field" id="calendar" name="date">
+                            </div> -->
+                            <div class="col-md-12 mt-3">
+                                <textarea id="agregar-descripcion" placeholder="Escribe un descripción..."
+                                    name="description" maxlength="150"></textarea>
+                            </div>
+                            <div class="row justify-content-center" id="submit-buttons">
+                                <button type="submit" class="btn btn-success mr-3 mt-3 mb-3" id="Publicar/Editar-foto">
+                                    Publicar Foto
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>include('header.html', '#page-header')</script>
+</body>
+
+</html>
